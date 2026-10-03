@@ -1,0 +1,289 @@
+/* ================================
+   HOURLY FORECAST
+================================ */
+
+.hourly-forecast {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 0;
+
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #25243d;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.hourly-forecast__header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+
+  flex-shrink: 0;
+}
+
+.hourly-forecast__header h2 {
+  margin: 0;
+
+  font-family: "Bricolage Grotesque", sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #fff;
+}
+
+
+/* ================================
+   DAY SELECTOR
+================================ */
+
+.hourly-forecast__header select {
+  padding: 8px 10px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #3a3957;
+
+  color: #fff;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+.hourly-forecast__header select:focus-visible {
+  outline: 2px solid #fff;
+
+  outline-offset: 2px;
+}
+
+
+/* ================================
+   HOURLY LIST
+================================ */
+
+.hourly-forecast__list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  width: 100%;
+
+  /*
+    Take all remaining height
+    inside the hourly panel.
+  */
+  flex: 1;
+
+  min-height: 0;
+
+  /*
+    Only the hourly records scroll.
+  */
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  padding-right: 6px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   HOURLY CARD
+================================ */
+
+.hourly-card {
+  width: 100%;
+
+  min-height: 46px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: #302f4a;
+
+  /*
+    Prevent cards from shrinking.
+  */
+  flex-shrink: 0;
+}
+
+.hourly-card:hover {
+  background: #383754;
+}
+
+
+/* ================================
+   ICON
+================================ */
+
+.hourly-card__icon {
+  width: 28px;
+
+  height: 28px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin-right: 10px;
+}
+
+
+/* ================================
+   TIME
+================================ */
+
+.hourly-card__time {
+  flex: 1;
+
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #fff;
+}
+
+
+/* ================================
+   TEMPERATURE
+================================ */
+
+.hourly-card__temperature {
+  margin: 0;
+
+  min-width: 45px;
+
+  text-align: right;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #fff;
+}
+
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+.hourly-forecast__list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hourly-forecast__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hourly-forecast__list::-webkit-scrollbar-thumb {
+  background: #55536f;
+
+  border-radius: 10px;
+}
+
+.hourly-forecast__list::-webkit-scrollbar-thumb:hover {
+  background: #6a6788;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+  .hourly-forecast {
+    height: 500px;
+
+    padding: 18px;
+  }
+
+  .hourly-card {
+    min-height: 48px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 425px) {
+
+  .hourly-forecast {
+    height: 460px;
+
+    padding: 16px;
+  }
+
+  .hourly-forecast__header h2 {
+    font-size: 17px;
+  }
+
+  .hourly-card {
+    min-height: 46px;
+
+    padding: 8px 10px;
+  }
+
+  .hourly-card__icon {
+    width: 26px;
+
+    height: 26px;
+  }
+
+  .hourly-card__time {
+    font-size: 13px;
+  }
+
+  .hourly-card__temperature {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,122 @@
+/* DAILY FORECAST */
+
+.daily-forecast {
+  width: 100%;
+}
+
+/* TITLE */
+
+.daily-forecast__title {
+  margin: 14px 0 14px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* LIST */
+
+.daily-forecast__list {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 10px;
+}
+
+/* FORECAST CARD */
+
+.forecast-card {
+  min-width: 0;
+
+  min-height: 125px;
+
+  padding: 12px 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid transparent;
+
+  border-radius: 9px;
+
+  background: #292844;
+
+  color: #ffffff;
+
+  font-family: "DM Sans", sans-serif;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border 0.2s ease,
+    transform 0.2s ease;
+}
+
+.forecast-card:hover {
+  background: #33324f;
+
+  transform: translateY(-2px);
+}
+
+/* SELECTED */
+
+.forecast-card--selected {
+  background: #30305b;
+
+  border-color: #5368e8;
+}
+
+/* DAY */
+
+.forecast-card__day {
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ICON */
+
+.forecast-card__icon {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+}
+
+/* TEMPERATURES */
+.forecast-card__temperatures {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 0 3px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+}
+
+.forecast-card__temperatures span:last-child {
+  color: #aaa9bd;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 760px) {
+  .daily-forecast__list {
+    overflow-x: auto;
+
+    grid-template-columns: repeat(7, 82px);
+  }
+}
